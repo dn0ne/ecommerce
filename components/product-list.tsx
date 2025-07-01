@@ -1,8 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import Stripe from "stripe";
 import ProductCard from "./product-card";
-import { ChangeEvent, useState } from "react";
 
 interface Props {
   products: Stripe.Product[];
