@@ -18,8 +18,6 @@ export const checkoutAction = async (formData: FormData): Promise<void> => {
     quantity: item.quantity,
   }));
 
-  console.log("Success URL:", `${process.env.NEXT_PUBLIC_BASE_URL}/success`);
-  console.log("Cancel URL:", `${process.env.NEXT_PUBLIC_BASE_URL}/checkout`);
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     line_items,
